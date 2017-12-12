@@ -9,4 +9,8 @@ A collection of Google Sheet functions
 4. Done!
 
 ## Time Updater
-The `time-updater.gs` script will record the date, time and user's e-mail address on two consecutive pre-defined cells.  You can change this by modifying the script.
+The `time-updater.gs` script will record the date, time and user's e-mail address on two consecutive pre-defined cells.  You can modify which cells by modifying this portion of the script:
+```
+SpreadsheetApp.getActiveSheet().getRange("C1:C1").setValue(timestring);
+SpreadsheetApp.getActiveSheet().getRange("D1:D1").setValue(userstring);
+```
